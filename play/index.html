@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#172959">
   <title>비전 마법사 키우기 · 사전예약</title>
-  <meta name="description" content="비전 마법사 키우기 Google Play 사전예약">
+  <meta name="description" content="비전 마법사 키우기 Google Play 사전예약 — 달빛 마법사 코스튬 · 다이아 50,000 · 영혼석 10,000 증정">
   <meta property="og:type" content="website">
   <meta property="og:title" content="비전 마법사 키우기 · 사전예약">
-  <meta property="og:description" content="Google Play 사전예약 진행 중">
+  <meta property="og:description" content="사전예약 보상: 달빛 마법사 코스튬 · 다이아 50,000 · 영혼석 10,000">
   <meta property="og:image" content="https://dldjsth14.github.io/WizardPolicy/play/poster.jpg">
   <meta property="og:url" content="https://dldjsth14.github.io/WizardPolicy/play/">
   <link rel="canonical" href="https://dldjsth14.github.io/WizardPolicy/play/">
@@ -18,14 +18,24 @@
     *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 20%,#e3efff,transparent 60%),radial-gradient(ellipse at 90% 80%,#fff0d7,transparent 60%),#f5f4fb}a{color:inherit}button{font:inherit}
     main{min-height:100svh;max-width:1040px;margin:auto;padding:44px 30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:56px;align-items:center}
     .art{margin:0;line-height:0}.art img{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 18px 70px #20376e20}
-    .brand{display:flex;align-items:center;gap:15px;margin:0 0 24px}.brand img{width:68px;height:68px;border-radius:17px;box-shadow:0 5px 18px #193d7c22}.publisher{font-size:11px;letter-spacing:.18em;font-weight:800;color:#596e9e;margin:0 0 7px}.status{font-size:12px;color:#3b62a2;font-weight:700;margin:0}.status::before{content:"";display:inline-block;width:7px;height:7px;background:#668cd2;border-radius:50%;margin-right:7px;vertical-align:1px}
-    h1{font-size:clamp(30px,3.6vw,42px);line-height:1.24;letter-spacing:-.055em;margin:0 0 13px}.intro{font-size:15px;line-height:1.8;color:#61708c;margin:0 0 24px;word-break:keep-all}
-    .actions{display:grid;gap:10px}.primary,.store-app,.copy{display:flex;justify-content:center;align-items:center;gap:10px;min-height:56px;border-radius:13px;text-decoration:none;padding:15px 17px;font-size:15px;font-weight:750;cursor:pointer}
-    .primary{min-height:72px;background:linear-gradient(135deg,#ffdf90,#f2bd55);color:#24345b;border:1px solid #d9aa55;box-shadow:0 7px 0 #d6a752,0 13px 28px #c6933330;margin-bottom:9px;justify-content:space-between;padding:14px 22px}.primary:hover{background:#ffe4a5}.primary:active{transform:translateY(3px);box-shadow:0 4px 0 #d6a752}.primary small{display:block;font-size:10px;letter-spacing:.11em;font-weight:700;color:#6b572f;margin-bottom:3px}.primary strong{display:block;font-size:21px;letter-spacing:-.04em}.primary .arrow{font-size:24px;line-height:1}.store-app{border:1px solid #c8d2e4;background:#fff9;color:#2b4778;min-height:46px;font-size:13px}.copy{width:100%;border:0;background:transparent;color:#5b6b89;min-height:38px;font-size:12px;padding:8px}.copy:hover{text-decoration:underline}
-    [hidden]{display:none!important}.help{margin:18px 0 0;border-top:1px solid #d9dfec;padding-top:16px}.help h2{font-size:12px;font-weight:750;margin:0 0 6px}.help p{font-size:11px;line-height:1.8;color:#6d7891;margin:0;word-break:keep-all}.feedback{font-size:12px;line-height:1.7;color:#345a94;margin:0}.feedback:not(:empty){margin-top:8px}
-    .manual{font-size:12px;background:white;border:1px solid #ccd6e7;border-radius:8px;padding:10px;width:100%;margin-top:10px;color:#213c6a}.footer{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 15px;font-size:10px;color:#7a85a0}.footer a{text-underline-offset:3px}
+    .brand{display:flex;align-items:center;gap:15px;margin:0 0 18px}.brand img{width:68px;height:68px;border-radius:17px;box-shadow:0 5px 18px #193d7c22}.publisher{font-size:11px;letter-spacing:.18em;font-weight:800;color:#596e9e;margin:0 0 7px}.status{font-size:12px;color:#3b62a2;font-weight:700;margin:0}.status::before{content:"";display:inline-block;width:7px;height:7px;background:#668cd2;border-radius:50%;margin-right:7px;vertical-align:1px}
+    h1{font-size:clamp(30px,3.6vw,42px);line-height:1.24;letter-spacing:-.055em;margin:0 0 12px}
+    /* 사전예약 보상 — 광고에서 본 것을 첫 화면에서 바로 다시 보여 준다 */
+    .rewards{position:relative;background:#fff;border:1px solid #d5ddf0;border-radius:14px;padding:18px 14px 12px;margin:0 0 16px;box-shadow:0 8px 26px #20376e12}
+    .rewards .tag{position:absolute;top:-12px;left:12px;background:#ffd65a;color:#3c2a08;font-size:11px;font-weight:800;letter-spacing:.06em;padding:4px 11px;border-radius:999px;border:1px solid #e3b94a}
+    .rewards .worth{position:absolute;top:-12px;right:12px;background:#3a2a7a;color:#ffe08a;font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;border:1px solid #fff}
+    .rewards ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+    .rewards li{background:#f3f5fc;border-radius:10px;padding:9px 4px 8px}
+    .rewards li b{display:block;font-size:13px;letter-spacing:-.02em;color:#24345b}.rewards li span{display:block;font-size:11px;color:#6b7a99;margin-top:2px}.rewards li .amt{color:#9a5f14;font-weight:800;font-size:14px;margin-top:1px}
+    .rewards p{font-size:11px;color:#6d7891;margin:9px 0 0;text-align:center;word-break:keep-all}
+    .actions{display:grid;gap:8px}.primary,.copy{display:flex;justify-content:center;align-items:center;gap:10px;min-height:56px;border-radius:13px;text-decoration:none;padding:15px 17px;font-size:15px;font-weight:750;cursor:pointer}
+    .primary{min-height:72px;background:linear-gradient(135deg,#ffdf90,#f2bd55);color:#24345b;border:1px solid #d9aa55;box-shadow:0 7px 0 #d6a752,0 13px 28px #c6933330;margin-bottom:2px;justify-content:space-between;padding:14px 22px}.primary:hover{background:#ffe4a5}.primary:active{transform:translateY(3px);box-shadow:0 4px 0 #d6a752}.primary small{display:block;font-size:10px;letter-spacing:.11em;font-weight:700;color:#6b572f;margin-bottom:3px}.primary strong{display:block;font-size:21px;letter-spacing:-.04em}.primary .arrow{font-size:24px;line-height:1}
+    .copy{width:100%;border:0;background:transparent;color:#5b6b89;min-height:36px;font-size:12px;padding:6px}.copy:hover{text-decoration:underline}
+    [hidden]{display:none!important}.help{margin:12px 0 0;border-top:1px solid #d9dfec;padding-top:12px}.help h2{font-size:12px;font-weight:750;margin:0 0 6px}.help p{font-size:11px;line-height:1.8;color:#6d7891;margin:0;word-break:keep-all}.feedback{font-size:12px;line-height:1.7;color:#345a94;margin:0}.feedback:not(:empty){margin-top:8px}
+    .manual{font-size:12px;background:white;border:1px solid #ccd6e7;border-radius:8px;padding:10px;width:100%;margin-top:10px;color:#213c6a}.footer{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 15px;font-size:10px;color:#7a85a0}.footer a{text-underline-offset:3px}
     a:focus-visible,button:focus-visible{outline:3px solid #c2943d;outline-offset:4px}
-    @media(max-width:700px){main{display:flex;flex-direction:column;gap:25px;padding:max(22px,env(safe-area-inset-top)) 0 max(24px,env(safe-area-inset-bottom))}.content{width:100%;max-width:450px;padding:0 23px}.brand{margin-bottom:17px;gap:12px}.brand img{width:57px;height:57px;border-radius:14px}h1{font-size:31px;margin-bottom:10px}.intro{font-size:13px;line-height:1.7;margin-bottom:20px}.primary{min-height:72px}.art{width:calc(100% - 32px);max-width:418px}.art img{border-radius:14px}.actions{scroll-margin-top:22px}}
+    @media(max-width:700px){main{display:flex;flex-direction:column;gap:22px;padding:max(16px,env(safe-area-inset-top)) 0 max(24px,env(safe-area-inset-bottom))}.content{width:100%;max-width:450px;padding:0 20px}.brand{margin-bottom:12px;gap:12px}.brand img{width:52px;height:52px;border-radius:13px}h1{font-size:29px;margin-bottom:10px}.primary{min-height:68px}.art{width:calc(100% - 32px);max-width:418px}.art img{border-radius:14px}.actions{scroll-margin-top:22px}}
+    @media(max-width:360px){.rewards li b{font-size:12px}.rewards li .amt{font-size:13px}}
   </style>
 </head>
 <body>
@@ -33,18 +43,26 @@
     <section class="content" aria-labelledby="game-title">
       <div class="brand"><img src="icon.png" width="68" height="68" alt="비전 마법사 키우기 앱 아이콘"><div><p class="publisher">ICECOW</p><p class="status">Google Play 사전예약 진행 중</p></div></div>
       <h1 id="game-title">비전 마법사 키우기</h1>
+      <section class="rewards" aria-label="사전예약 보상">
+        <span class="tag">사전예약 보상</span><span class="worth">33,000원 상당!</span>
+        <ul>
+          <li><b>달빛 마법사</b><span>코스튬 증정</span></li>
+          <li><b>다이아</b><span class="amt">50,000</span></li>
+          <li><b>영혼석</b><span class="amt">10,000</span></li>
+        </ul>
+        <p>사전예약 후 출시되면 게임 안에서 받을 수 있어요.</p>
+      </section>
       <div class="actions">
-        <a class="primary" id="web-link" href="https://play.google.com/store/apps/details?id=com.icecow.visionwizard" target="_blank" rel="noopener">
+        <a class="primary" id="store-link" data-kind="web" href="https://play.google.com/store/apps/details?id=com.icecow.visionwizard&utm_source=instagram&utm_medium=cpc&utm_campaign=prereg">
           <span><small>GOOGLE PLAY</small><strong>사전예약 하러 가기</strong></span><span class="arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="store-app" id="android-link" href="intent://details?id=com.icecow.visionwizard#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.icecow.visionwizard;end" hidden>플레이스토어 앱으로 열기</a>
         <button class="copy" type="button" id="copy-link">스토어 주소 복사</button>
       </div>
       <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
       <input class="manual" id="manual-link" aria-label="복사할 Google Play 주소" value="https://play.google.com/store/apps/details?id=com.icecow.visionwizard" readonly hidden>
-      <aside class="help">
-        <h2>인스타그램에서 버튼이 열리지 않나요?</h2>
-        <p>오른쪽 위 메뉴에서 ‘외부 브라우저에서 열기’를 선택해 주세요. 메뉴가 없으면 스토어 주소를 복사해 Chrome 또는 Samsung Internet에 붙여넣어 주세요.</p>
+      <aside class="help" id="inapp-help" hidden>
+        <h2>버튼을 눌러도 스토어가 안 열리나요?</h2>
+        <p>오른쪽 위 ⋯ 메뉴에서 ‘외부 브라우저에서 열기’를 누르거나, 스토어 주소를 복사해 Chrome 또는 Samsung Internet에 붙여넣어 주세요.</p>
       </aside>
       <footer class="footer"><span>© ICECOW</span><a href="https://dldjsth14.github.io/WizardPolicy/terms/preregistration/" target="_blank" rel="noopener">사전등록 및 보상 약관</a><a href="https://dldjsth14.github.io/WizardPolicy/" target="_blank" rel="noopener">개인정보처리방침</a><a href="analytics.html">방문 통계 안내</a></footer>
     </section>
@@ -53,8 +71,27 @@
   <script>
     'use strict';
     const playUrl = 'https://play.google.com/store/apps/details?id=com.icecow.visionwizard';
-    const androidLink = document.getElementById('android-link');
-    if (/Android/i.test(navigator.userAgent)) androidLink.hidden = false;
+    const webUrl = playUrl + '&utm_source=instagram&utm_medium=cpc&utm_campaign=prereg';
+    // 플레이 스토어 앱 직행 — 인스타그램 · 페이스북 안 브라우저는 https 링크를 앱으로 넘기지 않고 웹 페이지(구글 로그인 필요)로 열어서,
+    // 사용자가 누른 순간 market:// 로 앱을 부르고, 1.6초 안에 화면이 안 바뀌면 웹 주소로 보낸다.
+    const marketUrl = 'market://details?id=com.icecow.visionwizard&referrer=' + encodeURIComponent('utm_source=instagram&utm_medium=cpc&utm_campaign=prereg');
+    const ua = navigator.userAgent;
+    const isAndroid = /Android/i.test(ua);
+    const inApp = /Instagram|FBAN|FBAV|FB_IAB|Threads|KAKAOTALK|NAVER\(inapp/i.test(ua);
+    const store = document.getElementById('store-link');
+    if (inApp) document.getElementById('inapp-help').hidden = false;
+    if (isAndroid) {
+      store.dataset.kind = 'app';
+      store.addEventListener('click', e => {
+        e.preventDefault();
+        let left = false;
+        const gone = () => { if (document.visibilityState === 'hidden') left = true; };
+        document.addEventListener('visibilitychange', gone, {once:true});
+        window.addEventListener('pagehide', () => { left = true; }, {once:true});
+        location.href = marketUrl;
+        setTimeout(() => { if (!left && document.visibilityState === 'visible') location.href = webUrl; }, 1600);
+      });
+    }
     document.getElementById('copy-link').addEventListener('click', async () => {
       const feedback = document.getElementById('feedback');
       const manual = document.getElementById('manual-link');

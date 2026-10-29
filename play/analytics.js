@@ -34,5 +34,8 @@
     const visible = () => { if (document.visibilityState === 'visible') { document.removeEventListener('visibilitychange', visible); view(); } };
     document.addEventListener('visibilitychange', visible);
   } else view();
+  // 스토어 단추 하나: data-kind가 'app'(안드로이드 — market:// 로 플레이 앱 직행) 또는 'web'. 옛 id(web-link · android-link)도 그대로 센다.
+  const storeLink = document.getElementById('store-link');
+  storeLink?.addEventListener('click', () => send(storeLink.dataset.kind === 'app' ? 'app' : 'web'), {passive:true});
   for (const [id, kind] of [['web-link','web'], ['android-link','app'], ['copy-link','copy']]) document.getElementById(id)?.addEventListener('click', () => send(kind), {passive:true});
 })();
