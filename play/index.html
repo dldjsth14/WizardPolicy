@@ -73,23 +73,32 @@
     const playUrl = 'https://play.google.com/store/apps/details?id=com.icecow.visionwizard';
     const webUrl = playUrl + '&utm_source=instagram&utm_medium=cpc&utm_campaign=prereg';
     // 플레이 스토어 앱 직행 — 인스타그램 · 페이스북 안 브라우저는 https 링크를 앱으로 넘기지 않고 웹 페이지(구글 로그인 필요)로 열어서,
-    // 사용자가 누른 순간 market:// 로 앱을 부르고, 1.6초 안에 화면이 안 바뀌면 웹 주소로 보낸다.
+    // 안드로이드는 페이지가 열리는 순간 market:// 로 플레이 앱을 바로 부른다(사용자 10-29 「들어가는 순간 안 눌러도」).
+    // 0초: 숨은 iframe으로 요청(안 되는 브라우저여도 이 페이지는 남는다) → 0.8초: 그래도 이 화면이면 주소창 자체로 요청 → 그래도 안 열리면 이 페이지 그대로(단추로 다시).
     const marketUrl = 'market://details?id=com.icecow.visionwizard&referrer=' + encodeURIComponent('utm_source=instagram&utm_medium=cpc&utm_campaign=prereg');
     const ua = navigator.userAgent;
     const isAndroid = /Android/i.test(ua);
     const inApp = /Instagram|FBAN|FBAV|FB_IAB|Threads|KAKAOTALK|NAVER\(inapp/i.test(ua);
     const store = document.getElementById('store-link');
     if (inApp) document.getElementById('inapp-help').hidden = false;
+    let left = false;
+    const gone = () => { if (document.visibilityState === 'hidden') left = true; };
+    document.addEventListener('visibilitychange', gone);
+    window.addEventListener('pagehide', () => { left = true; });
+    const stillHere = () => !left && document.visibilityState === 'visible';
     if (isAndroid) {
       store.dataset.kind = 'app';
+      if (!new URLSearchParams(location.search).has('noauto')) {
+        const f = document.createElement('iframe');
+        f.style.display = 'none'; f.setAttribute('aria-hidden', 'true'); f.src = marketUrl;
+        document.body.appendChild(f);
+        setTimeout(() => { if (stillHere()) location.href = marketUrl; }, 800);
+      }
       store.addEventListener('click', e => {
         e.preventDefault();
-        let left = false;
-        const gone = () => { if (document.visibilityState === 'hidden') left = true; };
-        document.addEventListener('visibilitychange', gone, {once:true});
-        window.addEventListener('pagehide', () => { left = true; }, {once:true});
+        left = false;
         location.href = marketUrl;
-        setTimeout(() => { if (!left && document.visibilityState === 'visible') location.href = webUrl; }, 1600);
+        setTimeout(() => { if (stillHere()) location.href = webUrl; }, 1600);
       });
     }
     document.getElementById('copy-link').addEventListener('click', async () => {
