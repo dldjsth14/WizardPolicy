@@ -3,8 +3,10 @@
   'use strict';
   const params = new URLSearchParams(location.search);
   if (params.has('noanalytics') || params.has('preview') || navigator.doNotTrack === '1' || navigator.globalPrivacyControl || navigator.webdriver) return;
-  if (!['dldjsth14.github.io', 'icecow-visionwizard-play.blackyak256.chatgpt.site'].includes(location.hostname)) return;
-  const endpoint = 'https://icecow-visionwizard-play.blackyak256.chatgpt.site/api/visit';
+  if (!['dldjsth14.github.io', 'icecow-visionwizard-play.blackyak256.chatgpt.site', 'icecow-visionwizard-play.dldjsth.chatgpt.site'].includes(location.hostname)) return;
+  // 1758 (11-14): 집계 서버가 dldjsth 주소로 옮겨 갔다 — 옛 blackyak256 주소는 307로 넘겨 주기만 하는데, 다른 주소로 넘겨질 때 브라우저가 Origin을 「null」로 바꿔
+  // 새 서버가 403으로 버렸다(GitHub 페이지 방문 · 스토어 열기 · 복사가 집계 안 됨). 새 주소로 바로 보낸다.
+  const endpoint = 'https://icecow-visionwizard-play.dldjsth.chatgpt.site/api/visit';
   let memoryDay = '', memoryId = '';
   const uuid = () => {
     if (crypto.randomUUID) return crypto.randomUUID();
